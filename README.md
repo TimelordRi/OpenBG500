@@ -4,15 +4,15 @@
 
 **OpenBG500** is an open chinese E-commerce and bussiness knowledge graph dataset contained 500 relations. This dataset is refined from the [AliOpenKG](https://kg.alibaba.com/), a million-scale multi-modal dataset evolving products and consumption demands in a unified schema. AliOpenKG500 is developed for several knowledge graph embedding evaluations.
 
-The dataset splits all data into 3 parts. Base statistical information is shown in the table below.
+The dataset splits all data into 2 parts. Base statistical information is shown in the table below.
 
-| #Relation | #Entity | #Train (opened) | #Valid (opened) | #Test  |
-| :-------: | :-----: | :-------------: | :-------------: | :----: |
-|    500    | 269658  |     1242550     |     124255      | 124255 |
+| #Relation | #Entity | #Train (opened) | #Test  |
+| :-------: | :-----: | :-------------: | :----: |
+|    500    | 249746  |     1242545     |  5000  |
 
 ### Data
 
-OpenBG500 is available at [Google Drive](https://drive.google.com/drive/folders/1QgSL1wcLmA_eOQibwKxDaxVRGrMFqDMV?usp=sharing). The dataset offers two triplet formats for convenient evaluations and the main derectory of the dataset is as follows.
+OpenBG500 is available at Google Drive. The dataset offers two triplet formats for convenient evaluations and the main derectory of the dataset is as follows.
 
 ```
 .	              # Format 1: 
@@ -25,8 +25,7 @@ OpenBG500 is available at [Google Drive](https://drive.google.com/drive/folders/
 ├── other_format          # Format 2: 
 │   ├── entity_map.txt      # Raw entities to labels in chinese
 │   ├── relation_map.txt    # Raw relations to labels in chinese
-│   ├── train             # Triplets in train set
-└── └── valid             # Triplets in valid set
+└── └── train             # Triplets in train set
 ```
 
 ### Format
@@ -35,12 +34,12 @@ OpenBG500 is available at [Google Drive](https://drive.google.com/drive/folders/
 
 ```
 # train2id.txt
-1242550					# Number of triplets in file
+1242545					# Number of triplets in file
 head_entity_id <tab> tail_entity_id <tab> relation_id <\n>
 ...
 
 # entity2id.txt
-269658					# Number of entities in file
+249746					# Number of entities in file
 raw_entity_name <tab> entity_id <\n>
 ...
 
